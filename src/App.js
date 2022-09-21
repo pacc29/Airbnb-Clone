@@ -2,18 +2,18 @@ import React from "react";
 import Header from "./components/header";
 import Main from "./components/main";
 import Card from "./components/card";
-import Jokes from "./data";
+import Data from "./data";
 
 export default function App() {
-  const Joke = Jokes.map((jokes) => {
-    return <Card key={jokes.id} item={jokes} />;
+  const Cards = Data.map((card) => {
+    return <Card key={card.id} item={card} />;
   });
 
   return (
     <>
       <Header />
-      {/* <Main /> */}
-      {<section className="cards-list">{Joke}</section>}
+      <Main />
+      {<section className="cards-list">{Cards}</section>}
     </>
   );
 }
